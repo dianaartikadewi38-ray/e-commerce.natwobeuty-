@@ -10,13 +10,9 @@ let products = [
     { id: 8, name: "Rare Beauty True Foundation Pack", category: "Face", price: 240000, img: "images/IMG_9775.JPG", stock: 7, desc: "Foundation cair dengan berbagai shade kulit Asia, coverage medium to full dengan hasil flawless." }
 ];
 
-// INITIAL LOAD DARI LOCALSTORAGE JIKA ADA
-if (!localStorage.getItem('natwo_products')) {
-    localStorage.setItem('natwo_products', JSON.stringify(products));
-    localStorage.clear(images/);
-} else {
-    products = JSON.parse(localStorage.getItem('natwo_products'));
-}
+// INITIAL LOAD SINKRONISASI LOCALSTORAGE (VERSI AMAN & SELALU UPDATE)
+localStorage.removeItem('natwo_products'); 
+localStorage.setItem('natwo_products', JSON.stringify(products));
 
 let cart = JSON.parse(localStorage.getItem('natwo_cart')) || [];
 let activeDiscount = 0;
