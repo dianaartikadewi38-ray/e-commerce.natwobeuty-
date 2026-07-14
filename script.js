@@ -13,7 +13,7 @@ let products = [
 // INITIAL LOAD DARI LOCALSTORAGE JIKA ADA
 if (!localStorage.getItem('natwo_products')) {
     localStorage.setItem('natwo_products', JSON.stringify(products));
-    localStorage.clear(images/plaseholder.txt);
+    localStorage.clear(images/);
 } else {
     products = JSON.parse(localStorage.getItem('natwo_products'));
 }
