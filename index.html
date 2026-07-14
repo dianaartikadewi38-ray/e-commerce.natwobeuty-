@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natwo Beauty | Temukan Makeup Impianmu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-DUMMY-12345"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-DUMMY-12345');
+    </script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">NATWO <span>BEAUTY</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#about">Tentang Kami</a></li>
+                <li><a href="#contact">Kontak</a></li>
+                <li><a href="#" id="owner-panel-btn"><i class="fa-solid fa-lock"></i> Owner Panel</a></li>
+            </ul>
+            <div class="nav-icons">
+                <div class="cart-icon-wrapper" id="cart-toggle">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Temukan Makeup Impianmu dengan Sentuhan Pink Elegant</h1>
+                <p>Menemani perempuan tampil percaya diri dengan makeup yang aman, estetik, dan terjangkau.</p>
+                <a href="#shop" class="btn-primary">Belanja Sekarang</a>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="section-title">
+                <h2>Kategori Pilihan</h2>
+                <div class="line"></div>
+            </div>
+            <div class="category-grid">
+                <div class="category-card" onclick="filterCategory('Lipstik')">
+                    <i class="fa-solid fa-lipstick"></i>
+                    <h3>Lipstik</h3>
+                </div>
+                <div class="category-card" onclick="filterCategory('Eyeshadow')">
+                    <i class="fa-solid fa-palette"></i>
+                    <h3>Eyeshadow</h3>
+                </div>
+                <div class="category-card" onclick="filterCategory('Face')">
+                    <i class="fa-solid fa-sparkles"></i>
+                    <h3>Face Makeup</h3>
+                </div>
+                <div class="category-card" onclick="filterCategory('Tools')">
+                    <i class="fa-solid fa-brush"></i>
+                    <h3>Tools</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="shop" class="shop-section">
+            <div class="section-title">
+                <h2>Katalog Produk</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="filter-container">
+                <input type="text" id="search-input" placeholder="Cari produk impianmu...">
+                <select id="category-filter">
+                    <option value="all">Semua Kategori</option>
+                    <option value="Lipstik">Lipstik</option>
+                    <option value="Eyeshadow">Eyeshadow</option>
+                    <option value="Face">Face Makeup</option>
+                    <option value="Tools">Tools & Brush</option>
+                </select>
+                <select id="price-filter">
+                    <option value="all">Semua Harga</option>
+                    <option value="low">Di bawah Rp 100.000</option>
+                    <option value="high">Di atas Rp 100.000</option>
+                </select>
+            </div>
+
+            <div class="product-grid" id="product-container">
+                </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="about-container">
+                <div class="about-text">
+                    <h2>Tentang Natwo Beauty</h2>
+                    <p class="mission">"Menemani perempuan tampil percaya diri dengan makeup yang aman dan terjangkau."</p>
+                    <p>Natwo Beauty lahir dari impian untuk menghadirkan kosmetik berkualitas tinggi dengan estetika modern, feminin, dan elegan. Kami percaya setiap sentuhan warna adalah ekspresi keindahan sejati Anda.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews-section">
+            <div class="section-title">
+                <h2>Ulasan Pembeli</h2>
+                <div class="line"></div>
+            </div>
+            <div class="review-form-container">
+                <h3>Tinggalkan Ulasan Anda</h3>
+                <form id="review-form">
+                    <input type="text" id="rev-name" placeholder="Nama Anda" required>
+                    <textarea id="rev-text" placeholder="Tulis ulasan Anda tentang Natwo Beauty..." required></textarea>
+                    <button type="submit" class="btn-secondary">Kirim Ulasan</button>
+                </form>
+            </div>
+            <div class="reviews-grid" id="reviews-container">
+                </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="section-title">
+                <h2>Hubungi Kami</h2>
+                <div class="line"></div>
+            </div>
+            <div class="contact-container">
+                <form id="contact-form">
+                    <input type="text" placeholder="Nama Lengkap" required>
+                    <input type="email" placeholder="Email Anda" required>
+                    <textarea placeholder="Pesan Anda" required></textarea>
+                    <button type="submit" class="btn-primary">Kirim Pesan</button>
+                </form>
+                <div class="contact-info">
+                    <p><i class="fa-brands fa-whatsapp"></i> +62 812-3456-7890</p>
+                    <p><i class="fa-solid fa-envelope"></i> support@natwobeauty.com</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fa-solid fa-bag-shopping"></i> Shopee</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Keranjang Belanja</h3>
+            <i class="fa-solid fa-xmark" id="cart-close"></i>
+        </div>
+        <div class="cart-items" id="cart-items-container">
+            </div>
+        <div class="cart-footer">
+            <div class="discount-section">
+                <input type="text" id="coupon-input" placeholder="Kode Diskon (Contoh: NATWO10)">
+                <button onclick="applyCoupon()" class="btn-secondary">Gunakan</button>
+            </div>
+            <div class="total-price-box">
+                <p>Diskon: <span id="discount-amount">Rp 0</span></p>
+                <h4>Total: <span id="cart-total-price">Rp 0</span></h4>
+            </div>
+            <button class="btn-primary checkout-btn" onclick="openCheckoutModal()">Lanjut ke Checkout</button>
+        </div>
+    </div>
+
+    <div class="modal" id="product-modal">
+        <div class="modal-content">
+            <i class="fa-solid fa-xmark close-modal" onclick="closeModal('product-modal')"></i>
+            <div class="modal-body" id="modal-product-body">
+                </div>
+        </div>
+    </div>
+
+    <div class="modal" id="checkout-modal">
+        <div class="modal-content">
+            <i class="fa-solid fa-xmark close-modal" onclick="closeModal('checkout-modal')"></i>
+            <h3>Simulasi Checkout & Pembayaran</h3>
+            <form id="checkout-form">
+                <input type="text" placeholder="Nama Penerima" required>
+                <input type="text" placeholder="Alamat Pengiriman Lengkap" required>
+                <select required>
+                    <option value="">Pilih Metode Pembayaran (Simulasi Midtrans)</option>
+                    <option value="gopay">GoPay / QRIS</option>
+                    <option value="bva">Bank Central Asia (Virtual Account)</option>
+                    <option value="mva">Mandiri Bill Payment</option>
+                </select>
+                <div class="checkout-summary-box">
+                    <p>Total yang harus dibayar: <strong id="checkout-total-pay">Rp 0</strong></p>
+                </div>
+                <button type="submit" class="btn-primary">Bayar Sekarang</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="owner-modal">
+        <div class="modal-content owner-content">
+            <i class="fa-solid fa-xmark close-modal" onclick="closeModal('owner-modal')"></i>
+            <h3>Owner Stock Management Panel</h3>
+            <div id="owner-auth-box">
+                <p>Masukkan Kata Sandi Owner untuk Mengelola Stok:</p>
+                <input type="password" id="owner-password" placeholder="Kata Sandi">
+                <button onclick="authenticateOwner()" class="btn-primary">Masuk</button>
+                <p id="auth-error" style="color: red; display: none; margin-top: 10px;">Sandi salah!</p>
+            </div>
+            <div id="owner-dashboard" style="display: none;">
+                <table class="stock-table">
+                    <thead>
+                        <tr>
+                            <th>Nama Produk</th>
+                            <th>Kategori</th>
+                            <th>Stok Saat Ini</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="stock-table-body">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 NATWO BEAUTY. All Rights Reserved. Clean, Feminine, and Elegant Cosmestics.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
