@@ -1,13 +1,13 @@
 // DATA DATA PRODUK (Berisi 8 Produk dari Gambar Unggahan Anda)
 let products = [
-    { id: 1, name: "Natwo Classic Matte Lipstick", category: "Lipstik", price: 89000, img: "images/IMG_9768.webp", stock: 15, desc: "Lipstik batangan klasik dengan sentuhan warna soft rose yang mewah, matte namun tetap lembab di bibir." },
-    { id: 2, name: "Rose Petal Smooth Blusher", category: "Face", price: 125000, img: "images/IMG_9769.jpeg", stock: 12, desc: "Blush on berbentuk mawar yang memberikan rona alami nan segar pada pipi Anda sepanjang hari." },
-    { id: 3, name: "Longlasting Matte Lip Cream", category: "Lipstik", price: 79000, img: "images/IMG_9770.webp", stock: 20, desc: "Lip cream cair dengan pigmentasi tinggi berwarna bold pinkish red, cepat kering, dan tahan lama." },
-    { id: 4, name: "12-Color Aesthetic Eyeshadow Palette", category: "Eyeshadow", price: 185000, img: "images/IMG_9771.webp", stock: 8, desc: "Palet eyeshadow dengan 12 kombinasi warna bumi, shimmer, dan matte pinkish rose gold yang menawan." },
-    { id: 5, name: "Sage Green Premium Brush Set", category: "Tools", price: 145000, img: "images/IMG_9772.jpeg", stock: 10, desc: "Satu set kuas makeup premium isi 11 pcs berwarna sage green yang lembut dan tidak rontok di kulit." },
-    { id: 6, name: "Ultra Fine Liquid Eyeliner Gold Edition", category: "Eyeshadow", price: 69000, img: "images/IMG_9773.jpeg", stock: 25, desc: "Eyeliner cair berujung presisi tinggi untuk menghasilkan garis mata hitam pekat yang simetris sempurna." },
-    { id: 7, name: "Clinique Moisture Press Powder", category: "Face", price: 210000, img: "images/IMG_9774.jpeg", stock: 5, desc: "Bedak padat eksklusif dengan formula mengontrol minyak wajah sekaligus melembabkan kulit." },
-    { id: 8, name: "Rare Beauty True Foundation Pack", category: "Face", price: 240000, img: "images/IMG_9775.jpeg", stock: 7, desc: "Foundation cair dengan berbagai shade kulit Asia, coverage medium to full dengan hasil flawless." }
+    { id: 1, name: "Natwo Classic Matte Lipstick", category: "Lipstik", price: 89000, img: "images/IMG WEBP_9768..WEBP", stock: 15, desc: "Lipstik batangan klasik dengan sentuhan warna soft rose yang mewah, matte namun tetap lembab di bibir." },
+    { id: 2, name: "Rose Petal Smooth Blusher", category: "Face", price: 125000, img: "images/IMG_9769.AVIF", stock: 12, desc: "Blush on berbentuk mawar yang memberikan rona alami nan segar pada pipi Anda sepanjang hari." },
+    { id: 3, name: "Longlasting Matte Lip Cream", category: "Lipstik", price: 79000, img: "images/IMG_9770.WEBP", stock: 20, desc: "Lip cream cair dengan pigmentasi tinggi berwarna bold pinkish red, cepat kering, dan tahan lama." },
+    { id: 4, name: "12-Color Aesthetic Eyeshadow Palette", category: "Eyeshadow", price: 185000, img: "images/IMG_9771.WEBP", stock: 8, desc: "Palet eyeshadow dengan 12 kombinasi warna bumi, shimmer, dan matte pinkish rose gold yang menawan." },
+    { id: 5, name: "Sage Green Premium Brush Set", category: "Tools", price: 145000, img: "images/IMG_9772.JPG", stock: 10, desc: "Satu set kuas makeup premium isi 11 pcs berwarna sage green yang lembut dan tidak rontok di kulit." },
+    { id: 6, name: "Ultra Fine Liquid Eyeliner Gold Edition", category: "Eyeshadow", price: 69000, img: "images/IMG_9773.AVIF", stock: 25, desc: "Eyeliner cair berujung presisi tinggi untuk menghasilkan garis mata hitam pekat yang simetris sempurna." },
+    { id: 7, name: "Clinique Moisture Press Powder", category: "Face", price: 210000, img: "images/IMG_9774.JPG", stock: 5, desc: "Bedak padat eksklusif dengan formula mengontrol minyak wajah sekaligus melembabkan kulit." },
+    { id: 8, name: "Rare Beauty True Foundation Pack", category: "Face", price: 240000, img: "images/IMG_9775.JPG", stock: 7, desc: "Foundation cair dengan berbagai shade kulit Asia, coverage medium to full dengan hasil flawless." }
 ];
 
 // INITIAL LOAD DARI LOCALSTORAGE JIKA ADA
